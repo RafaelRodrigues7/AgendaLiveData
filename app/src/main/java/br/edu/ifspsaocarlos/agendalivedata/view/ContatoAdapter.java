@@ -47,8 +47,7 @@ implements Filterable {
     @Override
     public void onBindViewHolder(ContatoViewHolder holder, int position) {
          holder.nome.setText(contactListFiltered.get(position).getNome());
-
-
+         holder.email.setText(contactListFiltered.get(position).getEmail());
     }
 
     @Override
@@ -99,10 +98,12 @@ implements Filterable {
 
     public  class ContatoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         final TextView nome;
+        final TextView email;
 
         ContatoViewHolder(View view) {
             super(view);
             nome = view.findViewById(R.id.nome);
+            email = view.findViewById(R.id.email);
             view.setOnClickListener(this);
         }
 

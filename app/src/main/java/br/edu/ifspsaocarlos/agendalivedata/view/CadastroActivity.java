@@ -46,11 +46,13 @@ public class CadastroActivity extends AppCompatActivity {
 
             String nome = ((EditText) findViewById(R.id.editTextNome)).getText().toString();
             String fone = ((EditText) findViewById(R.id.editTextFone)).getText().toString();
+            String fone2 = ((EditText) findViewById(R.id.editTextFone2)).getText().toString();
             String email = ((EditText) findViewById(R.id.editTextEmail)).getText().toString();
 
             final Contato c = new Contato();
             c.setNome(nome);
             c.setFone(fone);
+            c.setFone2(fone2);
             c.setEmail(email);
 
             contatoViewModel.insert(c);
